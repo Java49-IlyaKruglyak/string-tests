@@ -2,6 +2,7 @@ package telran.string.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class StringTests {
@@ -12,11 +13,11 @@ class StringTests {
 		assertEquals('o', "hello".charAt(4));
 
 	}
-//	@Disabled
-//	@Test
-//	void testIndexOutOfBoundsException() {  		//despite the fact that the test is disabled, it still gives an error
-//		assertEquals("", "hello".charAt(-1));
-//	}
+	@Disabled
+	@Test
+	void testIndexOutOfBoundsException() {  		
+		assertEquals("", "hello".charAt(-1));
+	}
 	
 	@Test
 	void testCompareTo() {
@@ -31,6 +32,7 @@ class StringTests {
 		assertEquals(0, "Remote".compareToIgnoreCase("remote"));
 		assertTrue("Remote".compareToIgnoreCase("remote") == 0);
 		assertFalse("remote".compareTo("tv") == 0);
+		assertEquals(0, "hello".compareToIgnoreCase("hello"));
 	}
 
 	
